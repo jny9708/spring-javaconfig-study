@@ -5,12 +5,14 @@ import javax.servlet.Filter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.study.javaconfig.security.SecurityWebConfig;
+
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class<?>[]{RootConfig.class,DatabaseConfig.class};
+		return new Class<?>[]{RootConfig.class,DatabaseConfig.class,SecurityWebConfig.class};
 		
 	}
 
